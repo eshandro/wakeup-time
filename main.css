@@ -1,0 +1,58 @@
+.container {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.outer-shell {
+	background-color: darkgray;
+	width: 400px;
+	height: 300px;
+	/*margin: 0 auto;*/
+	position: relative;
+}
+
+.inner-shell {
+	background-color: black;
+	width: 350px;
+	height: 250px;
+	position: relative;
+	left: 25px;
+	top: 25px;
+}
+
+.stations {
+	position: absolute;
+	bottom: 10px;
+	left: 60px;
+	background-color: black;
+	color: white;
+}
+
+.labels {
+	float: left;
+	width: 50px;
+	height: 200px;
+	background-color: black;
+	color: white;
+}
+
+.clockscreen {
+	background-color: darkred;
+	float: left;
+	height: 200px;
+	width: 225px;
+}
+
+.clocktext {
+	background-color: darkred;
+	color: red;
+	height: 180px;
+	width: 180px;
+	float: left;
+}
+
+.indicator {
+	background-color: darkred;
+	color: red;
+	float: left;
+}
