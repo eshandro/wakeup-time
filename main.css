@@ -5,42 +5,59 @@
 
 .outer-shell {
 	background-color: darkgray;
-	width: 400px;
-	height: 300px;
+	width: 500px;
+	height: 350px;
 	/*margin: 0 auto;*/
 	position: relative;
+	border-radius: 20px;
 }
 
 .inner-shell {
 	background-color: black;
-	width: 350px;
-	height: 250px;
+	width: 450px;
+	height: 300px;
 	position: relative;
 	left: 25px;
 	top: 25px;
+	border-radius: 20px;
 }
 
 .stations {
 	position: absolute;
-	bottom: 10px;
-	left: 60px;
+	bottom: 4px;
+	left: 84px;
 	background-color: black;
 	color: white;
+	word-spacing: 12px;
+}
+
+.stations p:last-child {
+	word-spacing: 18px; 
 }
 
 .labels {
 	float: left;
-	width: 50px;
+	width: 75px;
 	height: 200px;
 	background-color: black;
 	color: white;
+	position: relative;
+	top: 25px;
+	text-align: center;
+}
+.labels h4:last-child {
+	position: relative;
+	top: 104px;
 }
 
 .clockscreen {
 	background-color: darkred;
 	float: left;
 	height: 200px;
-	width: 225px;
+	width: 300px;
+	position: relative;
+	top: 25px;
+	border-radius: 15px;
 }
 
 .clocktext {
