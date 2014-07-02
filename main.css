@@ -24,8 +24,8 @@
 
 .stations {
 	position: absolute;
-	bottom: 4px;
-	left: 84px;
+	bottom: 2px;
+	left: 90px;
 	background-color: black;
 	color: white;
 	word-spacing: 12px;
@@ -54,22 +54,66 @@
 	background-color: darkred;
 	float: left;
 	height: 200px;
-	width: 300px;
+	width: 325px;
 	position: relative;
 	top: 25px;
 	border-radius: 15px;
+
 }
 
-.clocktext {
+.clocktext-hour {
 	background-color: darkred;
 	color: red;
 	height: 180px;
-	width: 180px;
+	width: 100px;
 	float: left;
+	font-size: 90px;
+	line-height: 180px;
+}
+
+.clocktext-divider-1 {
+	background-color: red;
+	color: red;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	position: absolute;
+	left: 170px;
+	top: 65px;
+}
+
+.clocktext-divider-2 {
+	background-color: red;
+	color: red;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	position: absolute;
+	left: 170px;
+	top: 95px;
+}
+
+.clocktext-minutes {
+	background-color: darkred;
+	color: red;
+	height: 180px;
+	width: 100px;
+	float: left;
+	font-size: 90px;
+	margin-left: 40px;
+	line-height: 180px;
 }
 
 .indicator {
-	background-color: darkred;
-	color: red;
+	background-color: red;
 	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: relative;
+	left: 10px;
+	/*top: 20px;*/
+	bottom: -165px;
+	margin-right: 40px;
 }
+
