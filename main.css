@@ -112,8 +112,19 @@
 	border-radius: 50%;
 	position: relative;
 	left: 10px;
+	/* This is the top value to line up with PM */
 	/*top: 20px;*/
-	bottom: -165px;
+	/* this lines up with AUTO */
+	top: 165px;
 	margin-right: 40px;
 }
 
+.clocktext-time {
+	background-color: darkred;
+	color: red;
+	height: 180px;
+	width: 260px;
+	float: left;
+	font-size: 90px;
+	line-height: 180px;
+}
