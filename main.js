@@ -1,21 +1,33 @@
+
+var setTimeDisplay = function() {
 var date = new Date;
 
 var hours = date.getHours();
 
-var minutes = date.getMinutes();
+var minutes = date.getMinutes();	
 
-var setTimeDisplay = function() {
 	if (hours > 12) {
 		var displayHour = (hours - 12);
-		var ampm = "PM";
 	}
 	else {
 		var displayHour = hours;
-		var ampm = "AM";
 	}
-	var displayTime = displayHour + ":" + minutes;
+	if (displayHour < 10) {
+		displayHour = "0" + displayHour
+	}
+	if (minutes <10 ) {
+		var displayMinutes = "0" + minutes;
+	}
+	else {
+		var displayMinutes = minutes;
+	}
+	var displayTime = displayHour + ":" + displayMinutes;
 	$('.clocktext-time').html(displayTime);
-	return displayTime;
+	
+	if (hours >= 12) {
+		$('.indicator').css('top', '20px');
+		}
+
 }
 
 
@@ -32,9 +44,6 @@ var setAmPm = function() {
 
 $(document).on('ready', function() {
  
- 	setTimeDisplay();
-
- 	window.setInterval(function(){setTimeDisplay()}, 60000);
 
 	var outershell = $('<div class="outer-shell"></div>');
 	
@@ -46,14 +55,7 @@ $(document).on('ready', function() {
 
 	var indicator = $('<div class="indicator"</div>');
 
-	var clockTextTime = $('<div class="clocktext-time">' + setTimeDisplay() + '</div>');
-	// var clockTextHour = $('<div class="clocktext-hour">12</div>');
-
-	// var clockTextMinutes = $('<div class="clocktext-minutes">12</div>');
-
-	// // var clockTextDivider1 = $('<div class="clocktext-divider-1"></div>');
-
-	// // var clockTextDivider2 = $('<div class="clocktext-divider-2"></div>');
+	var clockTextTime = $('<div class="clocktext-time"></div>');
 
 	var stations = $('<div class="stations"><p>AM 53 60 70 90 110 140 170</p><p>FM 88 92 96 102 106 108</p></div>');
 
@@ -66,8 +68,7 @@ $(document).on('ready', function() {
 	$(innershell).prepend(stations);
 	$(clockScreen).append(indicator);
 	$(clockScreen).append(clockTextTime);
-
- 	setAmPm();
-
+	setTimeDisplay();
+ 	window.setInterval(function(){setTimeDisplay()}, 10000);
 
 });
